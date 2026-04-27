@@ -29,18 +29,22 @@
             // Register mod
             Game.registerMod('CookieLiquidator',
             {
-                // Variables
-                // -- Options
-                //liquidatorLoopFrequency
-                //liquidatorActivityReportFrequency
-                
-                // Constants
-                // -- Strings
-                liquidatorGreeting = 'Becoming exit liquidity in 3..2..1..'
-                
-                
-                async function startLiquidating()
+                init:function()
                 {
+                    // Variables
+                    // -- Options
+                    //liquidatorLoopFrequency
+                    //liquidatorActivityReportFrequency
+                    
+                    // Constants
+                    // -- Strings
+                    liquidatorGreeting = 'Becoming exit liquidity in 3..2..1..'
+                    
+                    
+                    // Run
+                    
+                    async function startLiquidating()
+                    {
                     if (!Game.Objects['Bank'].minigame)
                     {
                         console.log('===$$$=== Stock Market minigame has not initialised yet! Will try again in 500 ms.');
@@ -55,12 +59,10 @@
                         //console.log('===$$$=== Logic loop frequency: ' + liquidatorTimeBeautifier(liquidatorLoopFrequency))
                         //console.log('===$$$=== Profit/Loss/Efficiency report frequency: ' + liquidatorTimeBeautifier(liquidatorActivityReportFrequency))
                         console.log('===$$$=== ')
-                        Game.Notify(`CookieLiquidator is ready`,liquidatorGreeting,[35,33],false)
+                        Game.Notify(`CookieLiquidator is ready`,liquidatorGreeting,[35,33],6)
                         //console.log(stockList.check)
                     }
-                },
-                init:function()
-                {
+                    }
                     this.startLiquidating();
                 },
                 
