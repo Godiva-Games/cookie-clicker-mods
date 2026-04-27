@@ -54,22 +54,22 @@
             
             async function startLiquidating()
             {
-            if (!Game.Objects['Bank'].minigame)
-            {
-                console.log('===$$$=== Stock Market minigame has not initialised yet! Will try again in 500 ms.');
-                await new Promise(r => setTemout(r, 500))
-                return
-            }
-            else
-            {
-                console.log('===$$$=== CookieLiquidator initialised at ' + new Date())
-                console.log('===$$$=== with main options as follows:')
-                //console.log('===$$$=== Logic loop frequency: ' + liquidatorTimeBeautifier(liquidatorLoopFrequency))
-                //console.log('===$$$=== Profit/Loss/Efficiency report frequency: ' + liquidatorTimeBeautifier(liquidatorActivityReportFrequency))
-                console.log('===$$$=== ')
-                Game.Notify(`CookieLiquidator is ready`,LIQUIDATOR_GREETING,[35,33],false)
-                //console.log(stockList.check)
-            }
+                if (!Game.Objects['Bank'].minigame)
+                {
+                    console.log('===$$$=== Stock Market minigame has not initialised yet! Will try again in 500 ms.');
+                    await new Promise(r => setTemout(r, 500))
+                    return
+                }
+                else
+                {
+                    console.log('===$$$=== CookieLiquidator initialised at ' + new Date())
+                    console.log('===$$$=== with main options as follows:')
+                    //console.log('===$$$=== Logic loop frequency: ' + liquidatorTimeBeautifier(liquidatorLoopFrequency))
+                    //console.log('===$$$=== Profit/Loss/Efficiency report frequency: ' + liquidatorTimeBeautifier(liquidatorActivityReportFrequency))
+                    console.log('===$$$=== ')
+                    Game.Notify(`CookieLiquidator is ready`,LIQUIDATOR_GREETING,[35,33],false)
+                    //console.log(stockList.check)
+                }
             }
             startLiquidating();
         },
