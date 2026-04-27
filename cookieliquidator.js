@@ -21,71 +21,67 @@
     // Wait for game to load
     let tries = 0
     let maxTries = 100
-    while(tries < maxTries)
+    while(!(window.Game && Game.ready))
     {
-        tries++
-        if (window.Game && Game.ready)
+        if (tries < maxTries)
         {
-
-            // Register mod
-            Game.registerMod('CookieLiquidator',
-            {
-                init:function()
-                {
-                    // Variables
-                    // -- Options
-                    //liquidatorLoopFrequency
-                    //liquidatorActivityReportFrequency
-                    
-                    // Constants
-                    // -- Strings
-                    const LIQUIDATOR_GREETING = 'Becoming exit liquidity in 3..2..1..'
-                    
-                    
-                    // Run
-                    
-                    async function startLiquidating()
-                    {
-                    if (!Game.Objects['Bank'].minigame)
-                    {
-                        console.log('===$$$=== Stock Market minigame has not initialised yet! Will try again in 500 ms.');
-                        await new Promise(r => setTemout(r, 500))
-                        return
-                    }
-                    else
-                    {
-                        console.log('===$$$=== ')
-                        console.log('===$$$=== CookieLiquidator initialised at ' + new Date())
-                        console.log('===$$$=== with main options as follows:')
-                        //console.log('===$$$=== Logic loop frequency: ' + liquidatorTimeBeautifier(liquidatorLoopFrequency))
-                        //console.log('===$$$=== Profit/Loss/Efficiency report frequency: ' + liquidatorTimeBeautifier(liquidatorActivityReportFrequency))
-                        console.log('===$$$=== ')
-                        Game.Notify(`CookieLiquidator is ready`,LIQUIDATOR_GREETING,[35,33],6)
-                        //console.log(stockList.check)
-                    }
-                    }
-                    this.startLiquidating();
-                },
-                
-                save:function()
-                {
-                
-                },
-                
-                load:function(str)
-                {
-                
-                },
-            });
+            console.error('CookieLiquidator couldn\'t load properly!')
+            return
         }
         else
         {
             await new Promise(r => setTimeout(r, 500))
         }
+        tries++
     }
-    if (tries >= maxTries)
+
+    // Register mod
+    Game.registerMod('CookieLiquidator',
     {
-        console.error('CookieLiquidator couldn\'t load properly!')
-        return
-    }
+        init:function()
+        {
+            // Variables
+            // -- Options
+            //let liquidatorLoopFrequency
+            //let liquidatorActivityReportFrequency
+            
+            // Constants
+            // -- Strings
+            const LIQUIDATOR_GREETING = 'Becoming exit liquidity in 3..2..1..'
+            
+            
+            // Run
+            
+            async function startLiquidating()
+            {
+            if (!Game.Objects['Bank'].minigame)
+            {
+                console.log('===$$$=== Stock Market minigame has not initialised yet! Will try again in 500 ms.');
+                await new Promise(r => setTemout(r, 500))
+                return
+            }
+            else
+            {
+                console.log('===$$$=== CookieLiquidator initialised at ' + new Date())
+                console.log('===$$$=== with main options as follows:')
+                //console.log('===$$$=== Logic loop frequency: ' + liquidatorTimeBeautifier(liquidatorLoopFrequency))
+                //console.log('===$$$=== Profit/Loss/Efficiency report frequency: ' + liquidatorTimeBeautifier(liquidatorActivityReportFrequency))
+                console.log('===$$$=== ')
+                Game.Notify(`CookieLiquidator is ready`,LIQUIDATOR_GREETING,[35,33],false)
+                //console.log(stockList.check)
+            }
+            }
+            startLiquidating();
+        },
+        
+        save:function()
+        {
+        
+        },
+        
+        load:function(str)
+        {
+        
+        },
+    });
 })()
