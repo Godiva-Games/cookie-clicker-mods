@@ -31,8 +31,8 @@
             {
                 // Variables
                 // -- Options
-                liquidatorLoopFrequency
-                liquidatorActivityReportFrequency
+                //liquidatorLoopFrequency
+                //liquidatorActivityReportFrequency
                 
                 // Constants
                 // -- Strings
@@ -52,11 +52,11 @@
                         console.log('===$$$=== ')
                         console.log('===$$$=== CookieLiquidator initialised at ' + new Date())
                         console.log('===$$$=== with main options as follows:')
-                        console.log('===$$$=== Logic loop frequency: ' + liquidatorTimeBeautifier(liquidatorLoopFrequency))
-                        console.log('===$$$=== Profit/Loss/Efficiency report frequency: ' + liquidatorTimeBeautifier(liquidatorActivityReportFrequency))
+                        //console.log('===$$$=== Logic loop frequency: ' + liquidatorTimeBeautifier(liquidatorLoopFrequency))
+                        //console.log('===$$$=== Profit/Loss/Efficiency report frequency: ' + liquidatorTimeBeautifier(liquidatorActivityReportFrequency))
                         console.log('===$$$=== ')
                         Game.Notify(`CookieLiquidator is ready`,liquidatorGreeting,[35,33],false)
-                        console.log(stockList.check)
+                        //console.log(stockList.check)
                     }
                 },
                 init:function()
