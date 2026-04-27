@@ -23,6 +23,7 @@
     let maxTries = 100
     while(tries < maxTries)
     {
+        tries++
         if (window.Game && Game.ready)
         {
 
@@ -80,7 +81,6 @@
         else
         {
             await new Promise(r => setTimeout(r, 500))
-            tries++
         }
     }
     if (tries >= maxTries)
