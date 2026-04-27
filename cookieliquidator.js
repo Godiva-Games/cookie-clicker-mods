@@ -38,7 +38,7 @@
                     
                     // Constants
                     // -- Strings
-                    liquidatorGreeting = 'Becoming exit liquidity in 3..2..1..'
+                    const LIQUIDATOR_GREETING = 'Becoming exit liquidity in 3..2..1..'
                     
                     
                     // Run
@@ -59,7 +59,7 @@
                         //console.log('===$$$=== Logic loop frequency: ' + liquidatorTimeBeautifier(liquidatorLoopFrequency))
                         //console.log('===$$$=== Profit/Loss/Efficiency report frequency: ' + liquidatorTimeBeautifier(liquidatorActivityReportFrequency))
                         console.log('===$$$=== ')
-                        Game.Notify(`CookieLiquidator is ready`,liquidatorGreeting,[35,33],6)
+                        Game.Notify(`CookieLiquidator is ready`,LIQUIDATOR_GREETING,[35,33],6)
                         //console.log(stockList.check)
                     }
                     }
