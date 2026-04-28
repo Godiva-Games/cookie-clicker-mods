@@ -5,6 +5,9 @@ Compilation of cookie clicker mods
 
 
 ### CookieLiquidator - Buy/Sell Rules
+#### All Strategies
+Buy anything where price is $1
+
 #### Conservative
 Buys and sells only occur on Fast Rise (mode 3) and Slow Rise (mode 1) when the delta is greater than 0.0.  
 Buys on Slow Rise (mode 1) with a positive delta only occur when the goods value is less than the resting value.  
