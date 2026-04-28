@@ -31,7 +31,7 @@ Buys on Slow Fall (mode 2) occur if the delta is greater than -0.5 and the goods
 Sells any goods on Fast Fall (mode 4).  
 Sells any goods on Slow Fall (mode 2) and the goods value is greater than 25% of the resting value.  
 Sells any goods on Chaotic (mode 5) and the delta is less than -0.5.  
-Sells any goods on Chaotic (mode 5) and the delta is less than 0.0 if the goods value is equal or greater than 75% of the resting value.
-Sells any goods on Chaotic (mode 5) and the delta is less than -0.5 if the goods value is equal or greater than 50% of the resting value.
-Sells any goods on Slow Rise (mode 1) if the delta is less than 0.5 and the goods value is greater than the resting value plus twenty.
-Sells any goods on Slow Rise (mode 1) if the delta is less than 0.1 and the goods value is greater than the resting value plus ten.
+Sells any goods on Chaotic (mode 5) and the delta is less than 0.0 if the goods value is equal or greater than 75% of the resting value.  
+Sells any goods on Chaotic (mode 5) and the delta is less than -0.5 if the goods value is equal or greater than 50% of the resting value.  
+Sells any goods on Slow Rise (mode 1) if the delta is less than 0.5 and the goods value is greater than the resting value plus twenty.  
+Sells any goods on Slow Rise (mode 1) if the delta is less than 0.1 and the goods value is greater than the resting value plus ten.  
